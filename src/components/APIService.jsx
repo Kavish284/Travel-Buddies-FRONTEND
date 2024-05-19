@@ -1,7 +1,7 @@
 
 export default class APIService {
     static updateTrip(id, body){
-        return fetch(`http://127.0.0.1:5000/update/${id}/`, {
+        return fetch(`https://travel-buddies-backend.onrender.com/update/${id}/`, {
             'method': 'PUT',
             headers: {
                 'content-Type': 'application/json'
@@ -12,7 +12,7 @@ export default class APIService {
     }
 
     static insertTrip(body){
-        return fetch(`http://127.0.0.1:5000/add`, {
+        return fetch(`https://travel-buddies-backend.onrender.com/add`, {
             'method': 'POST',
             headers: {
                 'content-Type': 'application/json'
@@ -23,7 +23,7 @@ export default class APIService {
     }
 
     static deleteTrip(id){
-        return fetch(`http://127.0.0.1:5000/delete/${id}/`, {
+        return fetch(`https://travel-buddies-backend.onrender.com/delete/${id}/`, {
             'method': 'DELETE',
             headers: {
                 'content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default class APIService {
     }
 
     static clearmqtt(){
-        return fetch(`http://127.0.0.1:5000/mqttclear`, {
+        return fetch(`https://travel-buddies-backend.onrender.com/mqttclear`, {
             'method': 'GET',
             headers: {
                 'content-Type': 'application/json'
