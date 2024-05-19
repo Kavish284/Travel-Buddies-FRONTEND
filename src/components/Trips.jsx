@@ -14,7 +14,7 @@ export default function Trips(){
     
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/get', {
+        fetch('https://travel-buddies-backend.onrender.com/get', {
             'methods': 'GET',
             headers: {
                 'content-Type': 'applications/json'
@@ -26,7 +26,7 @@ export default function Trips(){
     },[])
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/curr_location', {
+        fetch('https://travel-buddies-backend.onrender.com/curr_location', {
             'methods': 'GET',
             headers: {
                 'content-Type': 'applications/json'
