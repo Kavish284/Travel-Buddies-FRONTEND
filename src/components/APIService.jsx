@@ -1,42 +1,41 @@
-
 export default class APIService {
-    static updateTrip(id, body){
+    static updateTrip(id, body) {
         return fetch(`https://travel-buddies-backend.onrender.com/update/${id}/`, {
-            'method': 'PUT',
+            method: 'PUT',
             headers: {
-                'content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(body)
         })
-        .then(resp => resp.json())
+        .then(resp => resp.json());
     }
 
-    static insertTrip(body){
-        return fetch(`https://travel-buddies-backend.onrender.com/add`, {
-            'method': 'POST',
+    static insertTrip(body) {
+        return fetch('https://travel-buddies-backend.onrender.com/add', {
+            method: 'POST',
             headers: {
-                'content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(body)
         })
-        .then(resp => resp.json())
+        .then(resp => resp.json());
     }
 
-    static deleteTrip(id){
+    static deleteTrip(id) {
         return fetch(`https://travel-buddies-backend.onrender.com/delete/${id}/`, {
-            'method': 'DELETE',
+            method: 'DELETE',
             headers: {
-                'content-Type': 'application/json'
-            },
-        })
+                'Content-Type': 'application/json'
+            }
+        });
     }
 
-    static clearmqtt(){
-        return fetch(`https://travel-buddies-backend.onrender.com/mqttclear`, {
-            'method': 'GET',
+    static clearmqtt() {
+        return fetch('https://travel-buddies-backend.onrender.com/mqttclear', {
+            method: 'GET',
             headers: {
-                'content-Type': 'application/json'
-            },
-        })
+                'Content-Type': 'application/json'
+            }
+        });
     }
 }
